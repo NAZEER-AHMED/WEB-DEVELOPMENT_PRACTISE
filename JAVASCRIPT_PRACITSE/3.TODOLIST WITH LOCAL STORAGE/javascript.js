@@ -23,15 +23,15 @@ function add()
             var td2 =tr.insertCell(2)
             btn1 = document.createElement('button')
             btn1.innerHTML = "Complete"
+            btn1.type='button'
             btn1.onclick=compelete
+            td2.appendChild(btn1)
            
-           
-            var td3 =tr.insertCell(2)
+            var td3 =tr.insertCell(3)
             btn2 = document.createElement('button')
             btn2.innerHTML = "Delete"
-            btn2.onclick=compelete
-
-            td2.appendChild(btn1)
+            btn2.type='button'
+            btn2.onclick=deleteItem
             td3.appendChild(btn2)
 
        
@@ -41,8 +41,8 @@ function add()
     c=c+1
 }
 function compelete()
-{   
-    alert("hurah")
+{  
+    alert("hurrah")
 
 }
 function deleteItem()
