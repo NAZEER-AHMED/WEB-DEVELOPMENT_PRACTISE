@@ -100,27 +100,40 @@ function task5()
     }
 
 }
+var checkvalue;
+ $("#radios2").children().click(function(){
+    checkvalue= event.target.value
+ })
 function task6()
 {
    var check=true
     let text_for_find = $("#text_1_find").val().toString()
-    let text_for_findindexorvale= $("#text_2_find")
+    let text_for_findindexorvale= $("#text_2_find").val()
+    let text_for_i_v=parseInt(text_for_findindexorvale)
    let check_radio_state = $("#radios2").children()
    let array = text_for_find.split(",")
-   for(let i=0;i<check_radio_state.length;i++)
+   let arr=[]
+   array.forEach(element => {
+       arr.push(element)
+   });
+   if(checkvalue=="findvalue")
    {
-       if(check_radio_state[i].is(":checked"))
-       {
-            
-       }
+    findItem(arr)
    }
-    
-}
-function findItem()
-{
-    
-}
-function findIndex()
-{
-
+   else if(checkvalue=="findindex")
+   {
+    findIndex(parseInt(arr))
+   }
+   function findItem(arr)
+   {
+     alert(arr.find((itm)=>{
+           return itm > text_for_i_v
+       }))
+   }
+   function findIndex(arr)
+   {
+      alert(arr.findIndex((item)=>{
+          return itm == text_for_i_v
+      }))
+   }
 }
