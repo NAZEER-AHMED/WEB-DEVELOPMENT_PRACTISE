@@ -13,6 +13,7 @@ function add()
         var tab = document.getElementById('tbody')
         var row_count = tab.rows.length
         var tr = tab.insertRow(row_count)
+        tr.id=c
        
             var td = tr.insertCell(0)
             td.innerHTML=c
@@ -24,6 +25,7 @@ function add()
             btn1 = document.createElement('button')
             btn1.innerHTML = "Complete"
             btn1.type='button'
+            btn1.id=c
             btn1.onclick=compelete
             td2.appendChild(btn1)
            
@@ -42,9 +44,10 @@ function add()
 }
 function compelete()
 {  
-    alert("hurrah")
-
+  let a=document.getElementById(event.srcElement.id)
+  alert(a[1].children)
 }
+
 function deleteItem()
 {
     alert("Deleted")
