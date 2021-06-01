@@ -16,11 +16,4 @@
 // one way flow
 //declatrtive library
 //npm i -g yarn
-//npm install (when deleting any file)
-//REACTDOM we use when we are working on webapplication
-//if we are working on app based application then we need only react
-// class based component and function based commponet
-//in function base component we dont need to render method
-//webback: bundler
-//if we are rendring same component with multiple time then it wil render 2nd component(becaue of vrtual dom)
-//how babel covert the code into javascript
+
